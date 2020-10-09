@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action="" method="POST" class="ui form">
+    {% csrf_token %}
+    {{ui_form}}
+    <button type="submit" class="ui primary button mt2" name="submit_ui_form">Update</button>
+</form>
+
+{% endblock body %}

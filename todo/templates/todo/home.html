@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action="" method="POST" class="ui form">
+    {% csrf_token %}
+    <p>
+    {{i_form.as_p}}
+    <button type="submit" class="ui primary button mt2" name="submit_i_form" > comment </button>
+    </p>
+</form>
+
+{% for x in todolist %}
+{{x.work}} &nbsp; 
+
+<a href="{% url 'garaj' x.pk %}">Update</a> &nbsp &nbsp
+
+<a href= "{% url 'ghamdu' x.pk %}">Delete</a>
+
+<br>
+{% endfor %}
+{% endblock body %}

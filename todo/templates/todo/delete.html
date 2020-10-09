@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="" method="POST" class="ui form">
+    {% csrf_token %}
+    <strong>Are you Sure to Delete : </strong>
+    {{talk.work}}<br>
+    <button type="submit" class="ui primary button mt2" name="submit_d_form">Delete Item</button>
+</form>
+{% endblock body %}
